@@ -1,6 +1,6 @@
 <template>
   <section class="container-sm">
-      <div class="about-container d-flex flex-column justify-content-center align-items-center mb-5">
+      <div class="about-container d-flex flex-column justify-content-center align-items-center" style="margin-top: 128px;">
         <div class="about-title" style="width: 80%;" >
           <TitleGradient label="Qui sommes-nous ?" left class="mb-4"></TitleGradient>
         </div>
@@ -13,7 +13,7 @@
               </div>
             </div>
 
-            <SecondaryButton label="Decouvrez-nous" class="mt-4"></SecondaryButton>
+            <SecondaryButton label="Decouvrez-nous" class="mt-4" to="/product"></SecondaryButton>
           </div>
 
           <div class="image" style="margin-left: -128px">

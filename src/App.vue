@@ -14,6 +14,8 @@
     </div>
   </header> -->
 
+  <Navbar></Navbar>
+
   <RouterView />
 
   <Footer></Footer>
@@ -22,7 +24,7 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
-import Navbar from './components/Navbar.vue';
+import Navbar from '@/layouts/Navbar.vue';
 import Footer from '@/layouts/Footer.vue'
 </script>
 

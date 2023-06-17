@@ -5,6 +5,7 @@
   --md-blue: #0d0628;
   --lavander: #e2eaff;
   --dk-blue: #160655;
+  overflow-x: hidden;
 }
 
 /* semantic color variables for this project */

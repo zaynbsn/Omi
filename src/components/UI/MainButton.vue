@@ -1,11 +1,11 @@
 <template>
-  <router-link class="secondary-button" :class="black ? 'black' : ''"  :to="to">{{ label }}</router-link>
+  <router-link class="main-button" :class="black ? 'black' : ''" :to="to">{{ label }}</router-link>
 </template>
 
 <script>
 
 export default {
-  name: 'SecondaryButton',
+  name: 'MainButton',
   props: {
     label: {
       type: String,
@@ -30,8 +30,8 @@ export default {
 </script>
 
 <style scoped>
-.secondary-button{
-  background: var(--purple);
+.main-button{
+  background: -webkit-linear-gradient(0deg, var(--purple) 20%, var(--blue) 99%);
   border-radius: 8px;
   padding: 10px 24px;
   text-decoration: none;

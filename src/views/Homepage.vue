@@ -12,7 +12,6 @@
     <Renaissance></Renaissance>
 
     <Faq></Faq>
-    
 </template>
 
 <script>
@@ -24,7 +23,7 @@ import AboutUs from '@/components/homepage/AboutUs.vue'
 import DontLoseTime from '@/components/homepage/DontloseTime.vue'
 import Renaissance from '@/components/homepage/Renaissance.vue'
 import Faq from '@/components/homepage/Faq.vue'
-import TitleGradient from '@/components/UI/titleGradient.vue'
+import TitleGradient from '@/components/UI/TitleGradient.vue'
 import SecondaryButton from '@/components/UI/SecondaryButton.vue'
 
 export default {

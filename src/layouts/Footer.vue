@@ -33,13 +33,13 @@ body{
   background: linear-gradient(90deg, var(--purple) 0%, var(--blue) 99%)!important;
   border-radius: 100% 100% 0 0;
   margin-left: calc(50% - 60vw);
-  margin-top: -35vh;
+  margin-top: -25vh;
   color: white;
 }
 .footer-content {
   width: 50vw;
   margin-left: calc(50% - 25vw);
-  margin-top: 40vh;
+  margin-top: 35vh;
   height: fit-content;
 }
 .link{

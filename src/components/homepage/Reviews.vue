@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-      <div class="reviews-container row d-flex flex-column align-items-center justify-content-center">
+      <div class="reviews-container row d-flex flex-column align-items-center justify-content-center" style="margin: 32px 0;">
         <div class=" col-9 mb-5">
           <TitleGradient label="La satisfaction de nos clients avant tout"></TitleGradient>
         </div>
@@ -29,7 +29,7 @@
 
 <script>
 import { ref } from 'vue'
-import TitleGradient from '@/components/UI/titleGradient.vue'
+import TitleGradient from '@/components/UI/TitleGradient.vue'
 
 export default {
   name: 'Reviews',

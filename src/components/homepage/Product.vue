@@ -1,7 +1,7 @@
 <template>
   <section class="container">
-      <div class="product-container row p-5 mt-5" >
-        <div class="product-image col-6 d-flex align-items center justify-content-center px-5" >
+      <div class="product-container row p-5" style="margin-top: 128px;">
+        <div class="product-image col-6 d-flex align-items center justify-content-center px-5">
           <img src="@/assets/img/baseImage.png" alt="omi product" style="object-fit: contain; margin: 0 2rem 0 2rem; max-width: 100%"  >
         </div>
 
@@ -11,7 +11,8 @@
           <div v-for="(text, index) in texts" :key="index" class="text">
             <p>{{ text }}</p>
           </div>
-            <SecondaryButton label="Voir toutes les fonctionnalitées" class="mt-4"></SecondaryButton>
+          
+          <SecondaryButton label="Voir toutes les fonctionnalitées" class="mt-4" to="/product"></SecondaryButton>
         </div>
       </div>
     </section>
@@ -19,7 +20,7 @@
 
 <script>
 import { ref } from 'vue'
-import TitleGradient from '@/components/UI/titleGradient.vue'
+import TitleGradient from '@/components/UI/TitleGradient.vue'
 import SecondaryButton from '@/components/UI/SecondaryButton.vue'
 
 export default {
@@ -48,17 +49,5 @@ export default {
 }
 p{
   margin-bottom: 8px;
-}
-.secondary-button{
-  background: var(--purple);
-  border-radius: 8px;
-  padding: 10px 24px;
-  text-decoration: none;
-  color: white;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-  font-size: 25.89px;
-  letter-spacing: 1px;
-  cursor: pointer;
 }
 </style>

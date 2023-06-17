@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <div class="faq d-flex flex-column justify-content-start align-items-center">
+    <div class="faq d-flex flex-column justify-content-start align-items-center" style="margin-top: 128px;">
       <div class="mb-4">
         <TitleGradient label="F.A.Q"></TitleGradient>
       </div>
@@ -25,11 +25,10 @@
 
 <script>
 import TitleGradient from '@/components/UI/titleGradient.vue'
-import SecondaryButton from '@/components/UI/SecondaryButton.vue'
 
 export default {
   name: 'Faq',
-  components: { TitleGradient, SecondaryButton },
+  components: { TitleGradient },
   data() {
     return {
       faq: [
@@ -82,7 +81,6 @@ export default {
 <style>
 .question, .answer{
   background-color: var(--md-blue);
-  border-radius: 32px;
   color: white;
 }
 .question:hover, .answer:hover{
@@ -91,11 +89,15 @@ export default {
 }
 .question{
   cursor: pointer;
+  border-radius: 64px;
 }
 .question-text{
   font-family: 'Como';
   font-weight: 700;
   font-size: 24px;
+}
+.answer{
+  border-radius: 32px;
 }
 
 </style>

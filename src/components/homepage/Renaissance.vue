@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-      <div class="renaissance d-flex flex-column justify-content-center align-items-center mb-5">
+      <div class="renaissance d-flex flex-column justify-content-center align-items-center" style="margin-top: 128px;">
         <div class="my-4">
           <TitleGradient label="En partenariat avec la Re-Naissance"></TitleGradient>
         </div>
@@ -22,11 +22,10 @@
 <script>
 import { ref } from 'vue'
 import TitleGradient from '@/components/UI/titleGradient.vue'
-import SecondaryButton from '@/components/UI/SecondaryButton.vue'
 
 export default {
   name: 'Renaissance',
-  components: { TitleGradient, SecondaryButton },
+  components: { TitleGradient },
   setup() {
     const texts = ref([
       "Omi a été conçu en étroite collaboration avec 'Renaissance 74', une association dédiée à l'accompagnement des personnes atteintes de cérébrolésion acquise, et qui affrontent quotidiennement des défis tels que les troubles de motricité, de parole, cognitifs et de mémoire. ",
