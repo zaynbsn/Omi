@@ -33,4 +33,10 @@ export default {
 .left{
   text-align: left;
 }
+
+@media screen and (max-width: 768px){
+  .title-gradient{
+    font-size: 36px;
+  }
+}
 </style>

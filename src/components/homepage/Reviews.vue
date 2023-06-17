@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-      <div class="reviews-container row d-flex flex-column align-items-center justify-content-center" style="margin: 32px 0;">
+      <div class="reviews-container row d-flex flex-column align-items-center justify-content-center" :style="isMobile ? 'margin: 32px 0;' : 'margin: 0;'">
         <div class=" col-9 mb-5">
           <TitleGradient label="La satisfaction de nos clients avant tout"></TitleGradient>
         </div>
@@ -30,10 +30,12 @@
 <script>
 import { ref } from 'vue'
 import TitleGradient from '@/components/UI/TitleGradient.vue'
+import windowWidthMixin from '@/mixins/windowWidthMixin'
 
 export default {
   name: 'Reviews',
   components: { TitleGradient },
+  mixins: [ windowWidthMixin ],
   setup() {
     const reviews = ref([
       {
@@ -62,9 +64,10 @@ export default {
 .reviews{
   background-color: var(--lavander);
   border-radius: 32px;
-  height: 300px;
+  height: fit-content;
   width: 100%;
 }
+@media screen and (max-width: 768px) {}
 .review-card{
   border: 1px solid white;
   background-color: var(--md-blue);

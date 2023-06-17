@@ -36,6 +36,11 @@ export default {
   text-align: center;
   z-index: 2;
 }
+@media screen and (max-width: 768px) {
+  .title{
+    font-size: 64px;
+  }
+}
 .omi-gif{
   position: absolute;
   width: 100%;
@@ -46,6 +51,6 @@ export default {
   background-color: white;
   border-radius: 96px 96px 0 0;
   height: 125px;
-  margin-top: -25px;
+  margin-top: -24px;
 }
 </style>
