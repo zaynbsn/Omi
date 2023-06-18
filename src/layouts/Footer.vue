@@ -54,4 +54,18 @@ body{
   text-decoration: underline;
 }
 
+@media screen and (max-width: 768px){
+  .footer-container {
+    width: 200vw;
+    height: 90vh;
+    background: linear-gradient(90deg, var(--purple) 25%, var(--blue) 75%)!important;
+    margin-left: calc(50% - 100vw);
+  }
+  .footer-content {
+    width: 50vw;
+    margin-left: calc(50% - 25vw);
+    margin-top: 30vh;
+    height: fit-content;
+  }
+}
 </style>
