@@ -29,12 +29,12 @@
           </div>
         </div>
         <div class="omi-gif wallet-card d-flex align-items-center justify-content-center" style="overflow-x: hidden; margin-left: 16px" >
-          <img v-if="walletColor == getDefaultEnum" src="@/assets/img/personalize/card.svg"/>
-          <img v-if="walletColor == getGradient2Enum" src="@/assets/img/personalize/gradientCard2.svg"/>
-          <img v-if="walletColor == getGradient1Enum" src="@/assets/img/personalize/gradientCard1.svg"/>
-          <img v-if="walletColor == getOrangeEnum" src="@/assets/img/personalize/orangeCard.svg"/>
-          <img v-if="walletColor == getPurpleEnum" src="@/assets/img/personalize/purpleCard.svg"/>
-          <img v-if="walletColor == getBlueEnum" src="@/assets/img/personalize/blueCard.svg"/>
+          <img v-if="walletColor == getDefaultEnum" src="@/assets/img/personalize/card.png"/>
+          <img v-if="walletColor == getGradient2Enum" src="@/assets/img/personalize/gradientCard2.png"/>
+          <img v-if="walletColor == getGradient1Enum" src="@/assets/img/personalize/gradientCard1.png"/>
+          <img v-if="walletColor == getOrangeEnum" src="@/assets/img/personalize/orangeCard.png"/>
+          <img v-if="walletColor == getPurpleEnum" src="@/assets/img/personalize/purpleCard.png"/>
+          <img v-if="walletColor == getBlueEnum" src="@/assets/img/personalize/blueCard.png"/>
         </div>
         <colorPicker @changeColor="handleColorChangeWallet"></colorPicker>
         
@@ -57,12 +57,12 @@
           </div>
         </div>
         <div class="omi-gif key-badge d-flex align-items-center justify-content-center" style="overflow-x: hidden; margin-left: 16px" >
-          <img v-if="keyColor == getDefaultEnum" src="@/assets/img/personalize/keyBadge.svg"/>
-          <img v-if="keyColor == getGradient2Enum" src="@/assets/img/personalize/gradientKeyBadge2.svg"/>
-          <img v-if="keyColor == getGradient1Enum" src="@/assets/img/personalize/gradientKeyBadge1.svg"/>
-          <img v-if="keyColor == getOrangeEnum" src="@/assets/img/personalize/orangeKeyBadge.svg"/>
-          <img v-if="keyColor == getPurpleEnum" src="@/assets/img/personalize/purpleKeyBadge.svg"/>
-          <img v-if="keyColor == getBlueEnum" src="@/assets/img/personalize/blueKeyBadge.svg"/>
+          <img v-if="keyColor == getDefaultEnum" src="@/assets/img/personalize/keyBadge.png"/>
+          <img v-if="keyColor == getGradient2Enum" src="@/assets/img/personalize/gradientKeyBadge2.png"/>
+          <img v-if="keyColor == getGradient1Enum" src="@/assets/img/personalize/gradientKeyBadge1.png"/>
+          <img v-if="keyColor == getOrangeEnum" src="@/assets/img/personalize/orangeKeyBadge.png"/>
+          <img v-if="keyColor == getPurpleEnum" src="@/assets/img/personalize/purpleKeyBadge.png"/>
+          <img v-if="keyColor == getBlueEnum" src="@/assets/img/personalize/blueKeyBadge.png"/>
         </div>
         <colorPicker @changeColor="handleColorChangeKey"></colorPicker>
         
@@ -85,12 +85,12 @@
           </div>
         </div>
         <div class="omi-gif key-badge d-flex align-items-center justify-content-center" style="overflow-x: hidden; margin-left: 16px" >
-          <img v-if="carColor == getDefaultEnum" src="@/assets/img/personalize/keyBadge.svg"/>
-          <img v-if="carColor == getGradient2Enum" src="@/assets/img/personalize/gradientKeyBadge2.svg"/>
-          <img v-if="carColor == getGradient1Enum" src="@/assets/img/personalize/gradientKeyBadge1.svg"/>
-          <img v-if="carColor == getOrangeEnum" src="@/assets/img/personalize/orangeKeyBadge.svg"/>
-          <img v-if="carColor == getPurpleEnum" src="@/assets/img/personalize/purpleKeyBadge.svg"/>
-          <img v-if="carColor == getBlueEnum" src="@/assets/img/personalize/blueKeyBadge.svg"/>
+          <img v-if="carColor == getDefaultEnum" src="@/assets/img/personalize/keyBadge.png"/>
+          <img v-if="carColor == getGradient2Enum" src="@/assets/img/personalize/gradientKeyBadge2.png"/>
+          <img v-if="carColor == getGradient1Enum" src="@/assets/img/personalize/gradientKeyBadge1.png"/>
+          <img v-if="carColor == getOrangeEnum" src="@/assets/img/personalize/orangeKeyBadge.png"/>
+          <img v-if="carColor == getPurpleEnum" src="@/assets/img/personalize/purpleKeyBadge.png"/>
+          <img v-if="carColor == getBlueEnum" src="@/assets/img/personalize/blueKeyBadge.png"/>
         </div>
         <colorPicker @changeColor="handleColorChangeCar"></colorPicker>
         
