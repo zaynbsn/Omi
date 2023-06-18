@@ -1,12 +1,12 @@
 <template>
   <section class="container-sm">
-      <div class="about-container d-flex flex-column justify-content-center align-items-center"  :style="!isMobile ? 'margin: 128px 0;' : 'margin: 64px 0;'">
+      <div class="about-container d-flex flex-column justify-content-center align-items-center mx-3"  :style="!isMobile ? 'margin: 128px 0;' : 'margin: 64px 0;'">
         <div class="about-title" style="width: 80%;" >
           <TitleGradient label="Qui sommes&#8209;nous&#160;?" :left="isMobile ? false : true" class="mb-4"></TitleGradient>
         </div>
 
         <div class="about-content d-flex justify-content-center align-items-center" :class="isMobile ? 'flex-column' : ''">
-          <div class="content p-5">
+          <div class="content p-sm-5" style="padding: 32px;">
             <div class="texts-container mb-5">
               <div v-for="(text, index) in texts" :key="index" class="text">
                 <p>{{ text }}</p>

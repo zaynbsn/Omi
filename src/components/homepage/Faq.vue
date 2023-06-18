@@ -1,17 +1,17 @@
 <template>
   <section class="container">
-    <div class="faq d-flex flex-column justify-content-start align-items-center" style="margin-top: 128px;">
+    <div class="faq d-flex flex-column justify-content-start align-items-center" :style="!isMobile ? 'margin: 128px 0;' : 'margin: 72px 0;'">
       <div class="mb-4">
         <TitleGradient label="F.A.Q"></TitleGradient>
       </div>
 
       <div v-for="(item, index) in faq" :key="index" class=" d-flex row flex-column justify-content-start align-items-center" style="width: 100%;" >
-        <div v-if="!item.isOpen" class="question col-9 d-flex justify-content-start align-items-center mb-4 p-4" @click="switchFaq(item)">
+        <div v-if="!item.isOpen" class="question col-sm-9 d-flex justify-content-start align-items-center mb-4 p-4" @click="switchFaq(item)">
           <img src="@/assets/img/plus.svg" alt="plus" style="width: 24px;">
           <div class="question-text mx-4">{{ item.question }}</div>
         </div>
         
-        <div v-if="item.isOpen" class="answer col-9 d-flex flex-column justify-content-center align-items-start mb-4 p-4">
+        <div v-if="item.isOpen" class="answer col-sm-9 d-flex flex-column justify-content-center align-items-start mb-4 p-4">
           <div class="question-container d-flex justify-content-start align-items-center mb-3">
             <img src="@/assets/img/minus.svg" alt="moins" style="width: 24px; cursor: pointer;" @click="switchFaq(item)">
             <div class="question-text mx-4">{{ item.question }}</div>
@@ -25,10 +25,12 @@
 
 <script>
 import TitleGradient from '@/components/UI/titleGradient.vue'
+import windowWidthMixin from '@/mixins/windowWidthMixin'
 
 export default {
   name: 'Faq',
   components: { TitleGradient },
+  mixins: [ windowWidthMixin ],
   data() {
     return {
       faq: [
@@ -98,6 +100,12 @@ export default {
 }
 .answer{
   border-radius: 32px;
+}
+
+@media screen and (max-width: 768px){
+  .question-text{
+    font-size: 16px;
+  }
 }
 
 </style>

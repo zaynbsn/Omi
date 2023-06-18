@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-      <div class="reviews-container row d-flex flex-column align-items-center justify-content-center" :style="!isMobile ? 'margin: 32px 0;' : 'margin: 0;'">
+      <div class="reviews-container row d-flex flex-column align-items-center justify-content-center mx-3" :style="!isMobile ? 'margin: 32px 0;' : 'margin: 0;'">
         <div class=" col-9 mb-5">
           <TitleGradient label="La satisfaction de nos clients avant tout"></TitleGradient>
         </div>

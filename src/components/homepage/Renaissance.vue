@@ -1,17 +1,17 @@
 <template>
   <section class="container">
-      <div class="renaissance d-flex flex-column justify-content-center align-items-center" style="margin-top: 128px;">
+      <div class="renaissance d-flex flex-column justify-content-center align-items-center mx-2" :style="!isMobile ? 'margin: 128px 0;' : 'margin: 0;'">
         <div class="my-4">
           <TitleGradient label="En partenariat avec la Re-Naissance"></TitleGradient>
         </div>
-        <div class="content-container row p-5">
-          <div class="texts col-6">
+        <div class="content-container row p-sm-5 mx-2" style="padding: 32px 24px">
+          <div class="texts col-sm-6">
             <div v-for="(text, index) in texts" :key="index" class="text">
               <p>{{ text }}</p>
             </div>
           </div>
 
-          <div class="logo-container col-6 d-flex justify-content-center align-items-center">
+          <div class="logo-container col-sm-6 d-flex justify-content-center align-items-cente">
             <img src="@/assets/img/renaissance.svg" alt="logo association Re-Naissance" style="width: 80%">
           </div>
         </div>
@@ -22,10 +22,12 @@
 <script>
 import { ref } from 'vue'
 import TitleGradient from '@/components/UI/titleGradient.vue'
+import windowWidthMixin from '@/mixins/windowWidthMixin'
 
 export default {
   name: 'Renaissance',
   components: { TitleGradient },
+  mixins: [ windowWidthMixin ],
   setup() {
     const texts = ref([
       "Omi a été conçu en étroite collaboration avec 'Renaissance 74', une association dédiée à l'accompagnement des personnes atteintes de cérébrolésion acquise, et qui affrontent quotidiennement des défis tels que les troubles de motricité, de parole, cognitifs et de mémoire. ",

@@ -1,8 +1,8 @@
 <template>
   <section class="container">
-      <div class="product-container row" :class="!isMobile ? 'px-5' : 'mt-5'" :style="!isMobile ? 'margin: 128px 0;' : 'margin-left: 10px;'">
-        <div v-if="!isMobile" class="product-image col-6 d-flex align-items center justify-content-center " >
-          <img src="@/assets/img/baseImage.png" alt="omi product" style="object-fit: contain; margin: 0 2rem 0 2rem; max-width: 100%"  >
+      <div class="product-container row" :class="!isMobile ? 'px-5' : 'mt-5 mx-2'" :style="!isMobile ? 'margin: 128px 0;' : 'margin: 0'">
+        <div v-if="!isMobile" class="product-image col-6 d-flex align-items center justify-content-center px-3">
+          <img src="@/assets/img/baseImage.png" alt="omi product" style="object-fit: contain; margin: 0 2rem 0 2rem; max-width: 95%"  >
         </div>
 
         <div v-if="!isMobile" class="product-content col-6 row">
@@ -15,12 +15,12 @@
           <SecondaryButton label="Voir toutes les fonctionnalitées" class="mt-4" to="/product"></SecondaryButton>
         </div>
         
-        <div v-if="isMobile" class="product-content row">
+        <div v-if="isMobile" class="product-content col">
           <TitleGradient label="Notre Produit" class="mb-3"></TitleGradient>
 
           <div class="mobile-div" style="position: relative;">
             <img src="@/assets/img/mobileProduct.png" alt="mobile product" style="width: 100%;" />
-            <div class="mobile-texts p-4" style="position: absolute; top: 12%; color: white;">
+            <div class="mobile-texts p-3" style="position: absolute; top: 12%; color: white;">
               <div v-for="(text, index) in mobileTexts" :key="index" class="text">
                 <p>{{ text }}</p>
               </div>
