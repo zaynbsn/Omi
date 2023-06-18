@@ -3,7 +3,7 @@
     <div class="container">
       <div class="title-container d-flex align-items-center justify-content-center">
         <h1 class="title mx-5">Gagnez du temps Ne cherchez plus</h1>
-        <div class="omi-gif d-flex align-items-center justify-content-center" style="overflow-x: hidden;">
+        <div class="omi-gif d-flex align-items-center justify-content-center" style="overflow-x: hidden; margin-left: 32px">
           <img src="@/assets/gifs/omi.gif"/>
         </div>
       </div>

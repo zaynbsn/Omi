@@ -1,5 +1,8 @@
 <template>
-  <router-link class="secondary-button" :class="black ? 'black' : ''"  :to="to">{{ label }}</router-link>
+  <router-link class="secondary-button" :class="black ? 'black' : ''"  :to="to">
+    {{ label }}
+    <img src="../../assets/img/hover-icon.svg" alt="icon" class="hover-icon" />
+  </router-link>
 </template>
 
 <script>
@@ -44,9 +47,22 @@ export default {
   width: fit-content;
   cursor: pointer;
 }
-
+.secondary-button span{
+  text-align: center;
+}
 .black{
   background: var(--md-blue);
-
+}
+.hover-icon{
+  width: 0;
+  height: auto;
+  margin-left: 0px;
+  margin-right: 0px;
+  transition: 0.2s;
+}
+.secondary-button:hover .hover-icon{
+  width: 24px;
+  margin-left: 8px;
+  margin-right: -8px;
 }
 </style>
