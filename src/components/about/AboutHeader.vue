@@ -1,7 +1,7 @@
 <template>
   <div class="about-header">
     <section class="container pb-5 mb-5">
-      <div class="header-content d-flex flex-column justify-content-center align-items-center pt-5" style="width: 60%;">
+      <div class="header-content d-flex flex-column justify-content-center align-items-center pt-5" :style="!isMobile ? 'width: 60%;' : ''">
         <div class="title">Qui sommes-nous ?</div>
         <div class="texts">
           <div v-for="(text, index) in texts" :key="index" class="text">
@@ -16,10 +16,11 @@
 
 <script>
 import { ref } from 'vue';
+import windowWidthMixin from '@/mixins/windowWidthMixin';
 
 export default {
   name: "AboutHeader",
-  components: {  },
+  mixins: [ windowWidthMixin ],
   setup() {
     const texts = ref([
       "Nous sommes un trio d'étudiants dévoués de l'École des Gobelins, spécialisés dans le design de l'innovation numérique. ",
@@ -60,7 +61,8 @@ export default {
 }
 @media screen and (max-width: 768px) {
   .title{
-    font-size: 64px;
+    font-size: 48px;
+    margin-bottom: 32px;
   }
   .round-section{
     height: 85px;

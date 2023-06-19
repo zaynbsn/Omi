@@ -5,7 +5,7 @@
     <div class="team d-flex flex-column justify-content-center align-items-center">
       <TitleGradient label="Notre équipe" left></TitleGradient>
 
-      <div class="nils row align-items-center justify-content-center">
+      <div class="theo row align-items-center justify-content-center">
         <div class="nils-picture col-sm-4">
           <img src="@/assets/img/nils.png" alt="Nils Boisson, web developper">
         </div>
@@ -22,8 +22,26 @@
           </div>
         </div>
       </div>
+      
+      <div v-if="isMobile" class="theo row align-items-center justify-content-center">
+        <div class="theo-picture col-sm-4">
+          <img src="@/assets/img/theo.png" alt="Theo Langlade, web designer">
+        </div>
 
-      <div class="theo row align-items-center justify-content-center" style="margin-top: -7rem">
+        <div class="content col-sm-8">
+          <div class="content-title">
+            <div class="name">Theo Langlade</div>
+            <div class="job">Designer</div>
+          </div>
+
+          <div class="content-description">
+            <p>Voici Théo Langlade, notre designer charmeur aux biceps saillants. Quand il n'est pas en train de soulever des poids ou de faire battre les cœurs, il conçoit avec passion des produits aussi robustes que son physique.</p>
+            <p>Connu pour transformer ses séances de musculation en brainstormings, Théo apporte à chaque produit une robustesse et un charme qui sont indéniablement les siens</p>
+          </div>
+        </div>
+      </div>
+
+      <div v-if="!isMobile" class="theo row align-items-center justify-content-center" style="margin-top: -7rem">
         <div class="content col-sm-8">
           <div class="content-title" style="justify-content: end;">
             <div class="job">Designer</div>
@@ -42,7 +60,7 @@
         </div>
       </div>
       
-      <div class="maddy row align-items-center justify-content-center" style="margin-top: -7rem">
+      <div class="maddy row align-items-center justify-content-center" :style="!isMobile ? 'margin-top: -7rem' : ''">
         <div class="maddy-picture col-sm-4">
           <img src="@/assets/img/maddy.png" alt="Maddy Misto, web designer">
         </div>
@@ -68,10 +86,12 @@
 import AboutHeader from '@/components/about/AboutHeader.vue'
 import TitleGradient from '@/components/UI/TitleGradient.vue'
 import DontLoseTime from '@/components/about/DontloseTime.vue'
+import windowWidthMixin from '@/mixins/windowWidthMixin'
 
 export default {
   name: "About",
   components: { AboutHeader, TitleGradient, DontLoseTime },
+  mixins: [ windowWidthMixin ]
 }
 </script>
 
@@ -102,5 +122,17 @@ export default {
 .content-description{
   padding-left: 96px;
   width: 75%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .content-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 32px
+  }
 }
 </style>
