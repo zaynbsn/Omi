@@ -112,7 +112,7 @@
 <script>
 import SecondaryButton from '@/components/UI/SecondaryButton.vue';
 import { productEnum, colorPickerEnum } from '@/enums/modules/ProductEnum'
-import colorPicker from '@/components/product/colorPicker.vue'
+import colorPicker from '@/components/product/ColorPicker.vue'
 import windowWidthMixin from '@/mixins/windowWidthMixin';
 
 export default {
