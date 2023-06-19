@@ -1,8 +1,8 @@
 <template>
   <section class="homehead bg-gradient" :style="!isMobile ? 'margin-bottom: 128px;' : 'margin-bottom: 72px 0;'">
     <div v-if="currentSection == getOmiEnum" class="container" >
-      <div class="title-container d-flex align-items-center justify-content-start">
-        <div class="content-container d-flex flex-column align-items-center justify-content-center" style="width: 50%; margin-top: -10rem; ">
+      <div class="title-container d-flex" :class="!isMobile ? 'align-items-center justify-content-start' : 'align-items-start justify-content-center pt-5'">
+        <div class="content-container d-flex flex-column align-items-center justify-content-center" :style="!isMobile ? 'width: 50%; margin-top: -10rem;' : ''">
           <div class="subcontainer">
             <h1 class="title">Omi</h1>
             <p class="subtitle">Le vide-poche connecté</p>
@@ -11,19 +11,19 @@
             </div>
           </div>
         </div>
-        <div class="omi-gif d-flex align-items-center justify-content-center" style="overflow-x: hidden; margin-left: 16px" >
+        <div class="omi-gif d-flex align-items-center justify-content-center" style="overflow-x: hidden; margin-left: 16px" :style="isMobile ? 'margin-top: 192px;' : ''" >
           <img src="@/assets/gifs/omi.gif"/>
         </div>
         
       </div>
-      <div class="next-button d-flex justify-content-center align-items-center" style="z-index: 2; margin-top: -2rem" @click="currentSection = getWalletEnum">
+      <div class="next-button d-flex justify-content-center align-items-center" style="z-index: 2; margin-top: -2rem" @click="currentSection = getWalletEnum" :style="isMobile ? 'margin-top: 32px;' : ''">
         <SecondaryButton label="Choisir mes badges" black to=""></SecondaryButton>
       </div>
     </div>
 
     <div v-if="currentSection == getWalletEnum" class="container">
-      <div class="title-container d-flex align-items-center justify-content-start">
-        <div class="content-container d-flex flex-column align-items-center justify-content-center" style="width: 50%; margin-top: -10rem; ">
+      <div class="title-container d-flex" :class="!isMobile ? 'align-items-center justify-content-start' : 'align-items-start justify-content-center pt-5'">
+        <div class="content-container d-flex flex-column align-items-center justify-content-center" :style="!isMobile ? 'width: 50%; margin-top: -10rem;' : ''">
           <div class="subcontainer">
             <h1 class="title">Badge Portefeuille</h1>
           </div>
@@ -50,8 +50,8 @@
     </div>
   
     <div v-if="currentSection == getKeyEnum" class="container">
-      <div class="title-container d-flex align-items-center justify-content-start">
-        <div class="content-container d-flex flex-column align-items-center justify-content-center" style="width: 50%; margin-top: -10rem; ">
+      <div class="title-container d-flex " :class="!isMobile ? 'align-items-center justify-content-start' : 'align-items-start justify-content-center pt-5'">
+        <div class="content-container d-flex flex-column align-items-center justify-content-center" :style="!isMobile ? 'width: 50%; margin-top: -10rem;' : ''">
           <div class="subcontainer">
             <h1 class="title">Badge clefs de maison</h1>
           </div>
@@ -78,8 +78,8 @@
     </div>
   
     <div v-if="currentSection == getCarEnum" class="container">
-      <div class="title-container d-flex align-items-center justify-content-start">
-        <div class="content-container d-flex flex-column align-items-center justify-content-center" style="width: 50%; margin-top: -10rem; ">
+      <div class="title-container d-flex" :class="!isMobile ? 'align-items-center justify-content-start' : 'align-items-start justify-content-center pt-5'">
+        <div class="content-container d-flex flex-column align-items-center justify-content-center" :style="!isMobile ? 'width: 50%; margin-top: -10rem;' : ''">
           <div class="subcontainer">
             <h1 class="title">Badge clefs de voiture</h1>
           </div>
@@ -309,11 +309,25 @@ export default {
 
 @media screen and (max-width: 768px) {
   .title{
-    font-size: 64px;
+    font-size: 32px;
+  }
+  .title-container{
+    height: 75vh;
   }
   .round-section{
     height: 85px;
     margin-top: 15px;
+  }
+  .subcontainer{
+    width: 100%;
+  }
+  .wallet-card img{
+    width: 140%;
+    margin-left: -96px;
+  }
+  .key-badge img{
+    width: 140%;
+    margin-left: -96px;
   }
 }
 </style>

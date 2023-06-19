@@ -1,7 +1,7 @@
 <template>
   <section class="container">
-    <div class="multifunction row justify-content-center mb-5">
-      <div class="col-sm-5 d-flex justify-content-start align-items-start">
+    <div class="multifunction row justify-content-center my-5">
+      <div v-if="!isMobile" class="col-sm-5 d-flex justify-content-start align-items-start">
         <img src="@/assets/img/defaultProduct.png" alt="default">
       </div>
 
@@ -14,7 +14,7 @@
           </div>
         </div>
 
-        <SecondaryButton label="Je choisi Omi" class="mt-4" to="/product"></SecondaryButton>
+        <SecondaryButton v-if="!isMobile" label="Je choisi Omi" class="mt-4" to="/product"></SecondaryButton>
       </div>
     </div>
 
@@ -28,16 +28,16 @@
           </div>
         </div>
 
-        <SecondaryButton label="Je choisi Omi" class="mt-4" to="/product"></SecondaryButton>
+        <SecondaryButton v-if="!isMobile" label="Je choisi Omi" class="mt-4" to="/product"></SecondaryButton>
       </div>
 
-      <div class="col-sm-5 d-flex justify-content-start align-items-start">
+      <div v-if="!isMobile" class="col-sm-5 d-flex justify-content-start align-items-start">
         <img src="@/assets/img/defaultProduct.png" alt="default">
       </div>
     </div>
 
     <div class="rfid row justify-content-center mb-5">
-      <div class="col-sm-5 d-flex justify-content-start align-items-start">
+      <div v-if="!isMobile" class="col-sm-5 d-flex justify-content-start align-items-start">
         <img src="@/assets/img/defaultProduct.png" alt="default">
       </div>
 
@@ -60,11 +60,13 @@
 import { ref } from 'vue'
 import SecondaryButton from '@/components/UI/SecondaryButton.vue'
 import Customization from '@/components/product/Customization.vue'
-import TitleGradient from '@/components/UI/TitleGradient.vue';
+import TitleGradient from '@/components/UI/TitleGradient.vue'
+import windowWidthMixin from '@/mixins/windowWidthMixin'
 
 export default {
   name: "ProductInfos",
   components: { SecondaryButton, Customization, TitleGradient },
+  mixins: [ windowWidthMixin ],
   setup() {
     const multiTexts = ref([
       "Omi intègre une étagère intelligente et organisée pour vos essentiels. Elle comprend trois compartiments distincts pour vos clés de maison, de voiture et votre portefeuille, offrant un rangement ordonné. ",
