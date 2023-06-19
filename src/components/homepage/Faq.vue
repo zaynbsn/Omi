@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import TitleGradient from '@/components/UI/titleGradient.vue'
+import TitleGradient from '@/components/UI/TitleGradient.vue'
 import windowWidthMixin from '@/mixins/windowWidthMixin'
 
 export default {

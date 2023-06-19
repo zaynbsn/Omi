@@ -32,7 +32,7 @@
 
 <script>
 import { ref } from 'vue'
-import TitleGradient from '@/components/UI/titleGradient.vue'
+import TitleGradient from '@/components/UI/TitleGradient.vue'
 import SecondaryButton from '@/components/UI/SecondaryButton.vue'
 import windowWidthMixin from '@/mixins/windowWidthMixin'
 
