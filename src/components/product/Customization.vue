@@ -255,7 +255,7 @@ export default {
 .title{
   font-family: 'Como';
   font-weight: 700;
-  font-size: 48px;
+  font-size: 40px;
   color: white;
   text-align: left;
   z-index: 2;
@@ -294,10 +294,10 @@ export default {
   margin-top: 64px;
 }
 .key-badge img{
-  width: 20%;
+  width: 60%;
 }
 .wallet-card img{
-  width: 30%;
+  width: 45%;
 }
 .round-section{
   width: 100%;

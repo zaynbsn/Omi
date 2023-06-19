@@ -9,7 +9,7 @@
 
       <div v-if="!isMobile" class="nav row d-flex justify-content-center align-items-center">
         <router-link to="/product" class="link col">Notre Produit</router-link>
-        <router-link to="/product" class="link col">À propos</router-link>
+        <router-link to="/about" class="link col">À propos</router-link>
         <MainButton label="Acheter" to="/product"></MainButton>
       </div>
       <div v-if="isMobile" class="burger-menu d-flex justify-content-center align-items-center">
@@ -22,7 +22,7 @@
         <div v-if="isNavbarMobileOpen">
           <hr style="width: 100%;" />
           <router-link v-if="isNavbarMobileOpen" to="/product" class="link mb-3" >Notre Produit</router-link>
-          <router-link v-if="isNavbarMobileOpen" to="/product" class="link mb-3">À propos</router-link>
+          <router-link v-if="isNavbarMobileOpen" to="/about" class="link mb-3">À propos</router-link>
           <div class="mb-5 d-flex justify-content-center align-items-center">
             <MainButton v-if="isNavbarMobileOpen" label="Acheter" to="/product" ></MainButton>
           </div>
